@@ -13,6 +13,7 @@
 >>4. PostgresSQL ![Postgresql](https://img.shields.io/badge/-Postgresql-%232c3e50?style=flat-square&logo=Postgresql)
 
 # Как запустить проект:
+Зарегестрироваться на сервисе weatherapi.com и получить API KEY
 
 Клонируйте репозиторий на локальную машину командой:
 ```
@@ -32,6 +33,7 @@ python python -m venv env
 
 ```
 python -m pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
 Выполнить миграции:
