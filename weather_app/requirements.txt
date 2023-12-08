@@ -1,0 +1,16 @@
+Django
+pytest
+pytest-pythonpath
+pytest-django
+djangorestframework
+djangorestframework-simplejwt
+Pillow
+PyJWT
+requests
+asgiref
+adrf
+python-dotenv
+psycopg2
+httpx
+asyncio
+python-decouple==3.5

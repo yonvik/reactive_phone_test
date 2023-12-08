@@ -1,24 +1,29 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+from decouple import config
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-y3rm*#kkb3ys#9csgx-eumka*)_r$7ohu^h1@&p)^5$(shr3z5'
+SECRET_KEY = os.getenv('SECRET_KEY', default='i')
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.auth',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'weather_api',
     'rest_framework',
-    'django.contrib.auth',
     'rest_framework.authtoken',
+    'adrf',
+    'weather_api',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +67,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [

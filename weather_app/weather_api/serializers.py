@@ -9,7 +9,8 @@ class WeatherSerializer(serializers.ModelSerializer):
         fields = (
                 'city', 
                 'temperature',
-                'humidity')
+                'humidity',
+                'pk')
 
 class SaveWeatherSerializer(serializers.ModelSerializer):
     class Meta:
